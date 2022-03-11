@@ -8,6 +8,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 import imageType from './objects/imageType'
 import blockModule from './objects/blockModule'
+import imageObject from './objects/imageObject'
 
 
 import settingsPage from './documents/settingsPage'
@@ -21,6 +22,7 @@ export default createSchema({
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
     /* Your types here! */
+    imageObject,
     imageType,
     blockModule,
 

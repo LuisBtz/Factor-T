@@ -13,7 +13,7 @@ export default {
         {
             name: 'principalTexto',
             title: 'Texto Principal',
-            type: 'string',
+            type: 'blockModule'
         },
         {
             name: 'principalImagenDeFondo',

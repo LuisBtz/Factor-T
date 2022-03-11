@@ -16,7 +16,7 @@ export default () =>
         S.divider(),
         S.listItem()
         .title('Inicio')
-        .icon(() => '🍾')
+        .icon(() => '🏡')
         .child(
           S.document()
             .schemaType('homePage')
