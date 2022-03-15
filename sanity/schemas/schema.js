@@ -9,10 +9,14 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import imageType from './objects/imageType'
 import blockModule from './objects/blockModule'
 import imageObject from './objects/imageObject'
+import stringObject from './objects/stringObject'
+import textObject from './objects/textObject'
+import seo from './objects/seo'
 
 
 import settingsPage from './documents/settingsPage'
 import homePage from './documents/homePage'
+import projectsPage from './documents/projectsPage'
 
 
 export default createSchema({
@@ -25,8 +29,12 @@ export default createSchema({
     imageObject,
     imageType,
     blockModule,
+    stringObject,
+    textObject,
+    seo,
 
     settingsPage,
-    homePage
+    homePage,
+    projectsPage
   ]),
 })

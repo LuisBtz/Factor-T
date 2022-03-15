@@ -1,9 +1,9 @@
 export default {
     //
-    name: 'homePage',
-    title: 'Home Page',
+    name: 'projectsPage',
+    title: 'Projects Page',
     type: 'document',
-    icon: () => `🏡`,
+    icon: () => `💐`,
     fields: [
         {
             name: 'title',
@@ -11,13 +11,18 @@ export default {
             type: 'string',
         },
         {
-            name: 'homeTexto',
-            title: 'Home Headline',
-            type: 'blockModule'
+            name: 'location',
+            title: 'Location',
+            type: 'stringObject'
         },
         {
-            name: 'homeSlider',
-            title: 'Home Slider',
+            name: 'event',
+            title: 'Event',
+            type: 'stringObject'
+        },
+        {
+            name: 'projectSlider',
+            title: 'Project Slider',
             type: 'array',
             of: [
                 {type: 'imageType'}
