@@ -1,9 +1,9 @@
 export default {
     //
-    name: 'homePage',
-    title: 'Home Page',
+    name: 'aboutPage',
+    title: 'About Page',
     type: 'document',
-    icon: () => `🏡`,
+    icon: () => `📝`,
     fields: [
         {
             name: 'title',
@@ -11,19 +11,21 @@ export default {
             type: 'stringObject',
         },
         {
-            name: 'homeTexto',
-            title: 'Home Headline',
+            name: 'descriptionAbout',
+            title: 'Description About',
             type: 'blockModule'
         },
         {
-            name: 'homeSlider',
-            title: 'Home Slider',
+            name: 'ourServicesText',
+            title: 'Our Services Text',
+            type: 'stringObject'
+        },
+        {
+            name: 'services',
+            title: 'Services',
             type: 'array',
-            options: {
-                layout: 'grid',
-              },
             of: [
-                {type: 'imageType'}
+                {type: 'service'}
             ]
         },
         {

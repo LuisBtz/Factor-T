@@ -13,14 +13,30 @@ export default () =>
               .schemaType('settingsPage')
               .documentId('settingsPage')
         ),
-        S.divider(),
         S.listItem()
-        .title('Inicio')
+        .title('Home')
         .icon(() => '🏡')
         .child(
           S.document()
             .schemaType('homePage')
             .documentId('homePage')
         ),
-        ...S.documentTypeListItems().filter(listItem => !['settingsPage', 'homePage'].includes(listItem.getId()))
+        S.listItem()
+        .title('About')
+        .icon(() => '📝')
+        .child(
+          S.document()
+            .schemaType('aboutPage')
+            .documentId('aboutPage')
+        ),
+        S.listItem()
+        .title('Contact')
+        .icon(() => '☎️')
+        .child(
+          S.document()
+            .schemaType('contactPage')
+            .documentId('contactPage')
+        ),
+        S.divider(),
+        ...S.documentTypeListItems().filter(listItem => !['settingsPage', 'homePage', 'aboutPage', 'contactPage'].includes(listItem.getId()))
     ])

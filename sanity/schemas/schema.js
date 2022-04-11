@@ -12,11 +12,14 @@ import imageObject from './objects/imageObject'
 import stringObject from './objects/stringObject'
 import textObject from './objects/textObject'
 import seo from './objects/seo'
+import service from './objects/service'
 
 
 import settingsPage from './documents/settingsPage'
 import homePage from './documents/homePage'
 import projectsPage from './documents/projectsPage'
+import aboutPage from './documents/aboutPage'
+import contactPage from './documents/contactPage'
 
 
 export default createSchema({
@@ -32,9 +35,12 @@ export default createSchema({
     stringObject,
     textObject,
     seo,
+    service,
 
     settingsPage,
     homePage,
-    projectsPage
+    projectsPage,
+    aboutPage,
+    contactPage
   ]),
 })

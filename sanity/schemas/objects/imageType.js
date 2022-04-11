@@ -1,17 +1,22 @@
 export default {
     name: 'imageType',
     title: 'Image',
-    type: 'object',
+    options: {
+        hotspot: true // <-- Defaults to false
+      },
+    type: 'image',
     fields: [
-      {
-          name: 'en',
-          title: 'English',
-          type: 'imageObject'
-      },
-      {
-          name: 'es',
-          title: 'Español',
-          type: 'imageObject'
-      },
-  ]
+        {
+          // Editing this field will be hidden behind an "Edit"-button
+          name: 'altEn',
+          type: 'string',
+          title: 'Alternative Text English',
+        },
+        {
+          // Editing this field will be hidden behind an "Edit"-button
+          name: 'altEs',
+          type: 'string',
+          title: 'Texto Alternativo en Español',
+        },
+      ]
 }

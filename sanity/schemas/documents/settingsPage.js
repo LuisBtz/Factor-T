@@ -18,12 +18,17 @@ export default {
         {
             name: 'copyright',
             title: 'Copyright',
-            type: 'string',
+            type: 'stringObject',
         },
         {
             name: 'insta',
             title: 'Instagram',
             type: 'url',
+        },
+        {
+            name: 'instaIcon',
+            title: 'Instagram Icon',
+            type: 'imageType',
         },
     ],
 }

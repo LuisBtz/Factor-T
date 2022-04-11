@@ -11,6 +11,11 @@ export default {
             type: 'string',
         },
         {
+            name: 'thumbnail',
+            title: 'Thumbnail',
+            type: 'imageType'
+        },
+        {
             name: 'location',
             title: 'Location',
             type: 'stringObject'
@@ -24,6 +29,9 @@ export default {
             name: 'projectSlider',
             title: 'Project Slider',
             type: 'array',
+            options: {
+                layout: 'grid',
+              },
             of: [
                 {type: 'imageType'}
             ]
@@ -34,4 +42,11 @@ export default {
             type: 'seo'
         }
     ],
+    preview: {
+        select: {
+          title: 'title',
+          subtitle: 'event.en',
+          media: 'thumbnail'
+        }
+      }
 }
