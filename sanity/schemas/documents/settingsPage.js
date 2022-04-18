@@ -16,6 +16,11 @@ export default {
             type: 'imageType',
         },
         {
+            name: 'iconoBlanco',
+            title: 'Icono Blanco',
+            type: 'imageType',
+        },
+        {
             name: 'copyright',
             title: 'Copyright',
             type: 'stringObject',
