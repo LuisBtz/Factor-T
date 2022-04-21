@@ -152,7 +152,7 @@ const [clickHam, setClickHam] = useState(false);
                             <li><Link to='/'>Home</Link></li>
                             <li><Link to='/about'>About</Link></li>
                             <li><Link to='/projects'>Projects</Link></li>
-                            <li><Link to='/'>Contact</Link></li>
+                            <li><Link to='/contact'>Contact</Link></li>
                             <li><button onClick={() => setClickHam(!clickHam)}>Close</button></li>
                         </ul>
                     </div>
@@ -179,7 +179,7 @@ const [clickHam, setClickHam] = useState(false);
                         </div>
                     </li>
                     <li>
-                        <Link to='/'>Contact</Link>
+                        <Link to='/contact'>Contact</Link>
                     </li>
                     <li>
                         <div className='lang'>

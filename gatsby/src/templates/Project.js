@@ -1,8 +1,12 @@
 import { graphql } from "gatsby";
-import React from "react";
+import React, { useState } from "react";
 import Seo from "../components/layout/seo"
 import Layout from "../components/layout/layout";
 import styled from "styled-components";
+import Slider from "react-slick"
+import "slick-carousel/slick/slick.css"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+
 
 
 
@@ -13,9 +17,6 @@ export default function SingleMezcalPage({ data: { project } }) {
     const black = true
 
     const background = '#FFFFFF'
-    
-    
-
     
     const settings = {
         centerPadding: "0",
@@ -29,7 +30,16 @@ export default function SingleMezcalPage({ data: { project } }) {
         autoplaySpeed: 4000,
         pauseOnHover: false,
         speed: 500,
+        beforeChange: function (currentSlide, nextSlide) {
+            console.log('before change', currentSlide, nextSlide);
+            setActiveSlideIndex(nextSlide);
+          },
       };
+
+
+
+
+      const [activeSlideIndex, setActiveSlideIndex] = useState(0);    
 
       
 
@@ -55,7 +65,7 @@ export default function SingleMezcalPage({ data: { project } }) {
             </div>
             <div className="de">
                 <SliderCont  {...settings}>
-                {data.sanityHomePage.homeSlider.map(({ _key, asset, altEn }) => {
+                {project.projectSlider.map(({ _key, asset, altEn }) => {
                         const bgGetDataImage = getImage(asset)
                         const bgGetDataImageAlt = altEn
                 return (
@@ -72,6 +82,9 @@ export default function SingleMezcalPage({ data: { project } }) {
                 );
                 })}
                 </SliderCont>
+                <div className='counter'>
+                    <p>{activeSlideIndex + 1} / {project.projectSlider.length}</p>
+                </div>
             </div>
         </ProjectContainer>
     </Layout>
@@ -80,19 +93,49 @@ export default function SingleMezcalPage({ data: { project } }) {
 
 
 const ProjectContainer = styled.section`
-padding-top: 150px;
-padding-left: 50px;
-padding-right: 50px;
+    padding-top: 150px;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    
+    .iz {
+        grid-column: 1/3;
+        grid-row: 1/2;
+        @media (max-width: 680px) {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            grid-column: 1/7;
+            grid-row: 1/2;
+            li {
+                margin-bottom: 5px;
+            }
+    }
+        ul {
+            li {
+                span {
+                    &:nth-child(1) {
+                        display: inline-block;
+                        width: 150px;
+                    }
+                }
+            }
+        }
+    }
+    .de {
+        grid-column: 3/6;
+        grid-row: 1/2;
+        @media (max-width: 680px) {
+            grid-column: 1/7;
+            grid-row: 2/3;
+    }
+    }
 `
 
 const SliderCont = styled(Slider)`
 `
 
 const Slide = styled.div`
-    height: calc(100vh - 75px);
-    @media (max-width: 680px) {
-        height: calc(100vh - 120px);
-    }
 `
 
 export const query = graphql`
@@ -109,6 +152,7 @@ export const query = graphql`
             en
         }
         projectSlider {
+            _key
             altEn
             asset {
                 gatsbyImageData(
