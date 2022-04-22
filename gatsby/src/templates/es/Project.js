@@ -1,5 +1,5 @@
 import { graphql } from "gatsby";
-import React, { useState } from "react";
+import React from "react";
 import Seo from "../../components/layout/seo"
 import Layout from "../../components/es/layout/layout";
 import styled from "styled-components";
@@ -30,16 +30,7 @@ export default function SingleMezcalPage({ data: { project } }) {
         autoplaySpeed: 4000,
         pauseOnHover: false,
         speed: 500,
-        beforeChange: function (currentSlide, nextSlide) {
-            console.log('before change', currentSlide, nextSlide);
-            setActiveSlideIndex(nextSlide);
-          },
       };
-
-
-
-
-      const [activeSlideIndex, setActiveSlideIndex] = useState(0);    
 
       
 
@@ -82,9 +73,6 @@ export default function SingleMezcalPage({ data: { project } }) {
                 );
                 })}
                 </SliderCont>
-                <div className='counter'>
-                    <p>{activeSlideIndex + 1} / {project.projectSlider.length}</p>
-                </div>
             </div>
         </ProjectContainer>
     </Layout>
