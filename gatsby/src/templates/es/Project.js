@@ -1,7 +1,7 @@
 import { graphql } from "gatsby";
 import React, { useState } from "react";
-import Seo from "../components/layout/seo"
-import Layout from "../components/layout/layout";
+import Seo from "../../components/layout/seo"
+import Layout from "../../components/es/layout/layout";
 import styled from "styled-components";
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
@@ -45,7 +45,7 @@ export default function SingleMezcalPage({ data: { project } }) {
 
   return (
     <Layout black={black} background={background}>
-        <Seo title={project.seo.title.en} description={project.seo.description.en} image={project.seo.image.asset.url} />
+        <Seo title={project.seo.title.es} description={project.seo.description.es} image={project.seo.image.asset.url} />
         <ProjectContainer>
             <div className="iz">
                 <ul className="text">
@@ -55,19 +55,19 @@ export default function SingleMezcalPage({ data: { project } }) {
                     </li>
                     <li data-aos="fade-up"  data-aos-delay="700" data-aos-duration="800">
                         <span>Location</span>
-                        <span>{project.location.en}</span>
+                        <span>{project.location.es}</span>
                     </li>
                     <li data-aos="fade-up"  data-aos-delay="900" data-aos-duration="800">
                         <span>Event</span>
-                        <span>{project.event.en}</span>
+                        <span>{project.event.es}</span>
                     </li>
                 </ul>
             </div>
             <div className="de" data-aos="fade-up"  data-aos-delay="1200" data-aos-duration="800" >
                 <SliderCont  {...settings}>
-                {project.projectSlider.map(({ _key, asset, altEn }) => {
+                {project.projectSlider.map(({ _key, asset, altEs }) => {
                         const bgGetDataImage = getImage(asset)
-                        const bgGetDataImageAlt = altEn
+                        const bgGetDataImageAlt = altEs
                 return (
                     <Slide
                         key={_key}
@@ -146,10 +146,10 @@ export const query = graphql`
             current
         }
         location {
-            en
+            es
         }
         event {
-            en
+            es
         }
         projectSlider {
             _key
@@ -164,10 +164,10 @@ export const query = graphql`
         }
         seo {
             title {
-                en
+                es
             }
             description {
-                en
+                es
             }
             image {
                 asset {

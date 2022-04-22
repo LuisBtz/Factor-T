@@ -12,7 +12,7 @@ const ServiciosAbout = ({data}) => {
         <ServiciosContainer data-aos="fade-up" data-aos-delay="600" data-aos-duration="800" >
             {data.sanityAboutPage.services.map(({ _key, name, description, image }) => {
                 const bgGetDataImage = getImage(image.asset)
-                const bgGetDataImageAlt = image.altEn
+                const bgGetDataImageAlt = image.altEs
                 
               return (
                   <div className='servicio'>
@@ -20,10 +20,10 @@ const ServiciosAbout = ({data}) => {
                         key={_key}
                         onClick={e=> e.target.classList.toggle('active')}
                     >
-                        {name.en}
+                        {name.es}
                     </button>
                     <div className='description'>
-                        <p>{description.en}</p>
+                        <p>{description.es}</p>
                         <div className='image'>
                             <GatsbyImage
                                 style={{ height: "100%", width: "100%" }}

@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@sanity/block-content-to-react": "^3.0.0",
+    "aos": "^2.3.4",
     "babel-plugin-styled-components": "^2.0.6",
     "gatsby": "^4.11.1",
     "gatsby-plugin-gatsby-cloud": "^4.11.1",

@@ -4,10 +4,10 @@ import styled from 'styled-components'
 const FormContact = ({data}) => {
     return(
         <FormContainer data-aos="fade-up"  data-aos-delay="1200" data-aos-duration="800">
-                    <h2>{data.sanityContactPage.mailText.en}</h2>
+                    <h2>{data.sanityContactPage.mailText.es}</h2>
                     <form name='contact' netlify>
                         <div className='input'>
-                            <label htmlFor='nombre'>Name</label>
+                            <label htmlFor='nombre'>Nombre</label>
                             <input id='nombre' type='text' name='nombre' />
                         </div>
                         <div className='input'>
@@ -15,15 +15,15 @@ const FormContact = ({data}) => {
                             <input id='email' type='email' name='e-mail' />
                         </div>
                         <div className='input'>
-                            <label htmlFor='tel'>Phone</label>
+                            <label htmlFor='tel'>Teléfono</label>
                             <input id='tel' type='number' name='phone' />
                         </div>
                         <div className='textArea'>
-                            <label htmlFor='mensaje'>Message</label>
+                            <label htmlFor='mensaje'>Mensaje</label>
                             <textarea id='mensaje' type='text' name='mensaje'></textarea>
                         </div>
                         <div className='send'>
-                            <button type='submit'>Send</button>
+                            <button type='submit'>Enviar</button>
                         </div>
                     </form>
         </FormContainer>

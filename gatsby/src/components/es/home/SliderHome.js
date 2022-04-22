@@ -30,7 +30,7 @@ const SliderHome = ({data}) => {
             <div className='shape'>
                 <div className='texto' data-aos="fade-up" data-aos-delay="800" data-aos-duration="800">
                     <BlockContent
-                        blocks={data.sanityHomePage.homeTexto._rawEn}
+                        blocks={data.sanityHomePage.homeTexto._rawEs}
                     />
                 </div>
                 <svg  viewBox="0 0 448 243" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -46,9 +46,9 @@ const SliderHome = ({data}) => {
             </div>
 
             <SliderCont  {...settings} >
-            {data.sanityHomePage.homeSlider.map(({ _key, asset, altEn }) => {
+            {data.sanityHomePage.homeSlider.map(({ _key, asset, altEs }) => {
                     const bgGetDataImage = getImage(asset)
-                    const bgGetDataImageAlt = altEn
+                    const bgGetDataImageAlt = altEs
               return (
                 <Slide
                     key={_key}

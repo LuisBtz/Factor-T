@@ -11,7 +11,7 @@ const DescriptionContact = ({data}) => {
     return(
         <ContainerDescription>
             <div className='texto' data-aos="fade-up"  data-aos-delay="500" data-aos-duration="800">
-                <h1>{data.sanityContactPage.headline.en}</h1>
+                <h1>{data.sanityContactPage.headline.es}</h1>
             </div>
             <div className='description'>
                 <div className='top' data-aos="fade-up"  data-aos-delay="700" data-aos-duration="800">
@@ -26,7 +26,7 @@ const DescriptionContact = ({data}) => {
                 </div>
                 <div className='bot' data-aos="fade-up"  data-aos-delay="900" data-aos-duration="800">
                     <BlockContent
-                        blocks={data.sanityContactPage.address._rawEn}
+                        blocks={data.sanityContactPage.address._rawEs}
                     />
                     <div className='insta'>
                         <a href={data.sanitySettingsPage.insta}>Instagram</a>

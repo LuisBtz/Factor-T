@@ -1,6 +1,6 @@
 import React,{useEffect} from "react"
-import { Normalizer } from "../styles/Normalizer"
-import { GlobalStyle } from "../styles/GlobalStyle"
+import { Normalizer } from "../../styles/Normalizer"
+import { GlobalStyle } from "../../styles/GlobalStyle"
 import Header from './header'
 import Footer from "./footer"
 import styled from "styled-components"

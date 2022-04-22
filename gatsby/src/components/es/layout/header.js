@@ -51,7 +51,7 @@ nav {
                     padding-left: 2px;
                     padding-right: 2px;
                 }
-                &:first-child {
+                &:last-child {
                     a {
                         font-weight: bold;
                     }
@@ -125,7 +125,7 @@ nav {
     query {
         sanitySettingsPage {
             logoBlanco {
-                altEn
+                altEs
                 asset {
                     gatsbyImageData(
                     layout: FULL_WIDTH
@@ -135,7 +135,7 @@ nav {
                 }
             }
             iconoBlanco {
-                altEn
+                altEs
                 asset {
                     gatsbyImageData(
                     layout: FULL_WIDTH
@@ -149,16 +149,17 @@ nav {
     `);
 
 const bgGetDataImage = getImage(data.sanitySettingsPage.logoBlanco.asset)
-const bgGetDataImageAlt = data.sanitySettingsPage.logoBlanco.altEn
+const bgGetDataImageAlt = data.sanitySettingsPage.logoBlanco.altEs
 
 const iconGetDataImage = getImage(data.sanitySettingsPage.iconoBlanco.asset)
-const iconGetDataImageAlt = data.sanitySettingsPage.iconoBlanco.altEn
+const iconGetDataImageAlt = data.sanitySettingsPage.iconoBlanco.altEs
 
 
 const [clickHam, setClickHam] = useState(false);
 
 var pathLink = typeof window !== 'undefined' ? window.location.pathname : ''
 
+const pathEs = pathLink.replace('/es', '')
 
 const languages = ['en', '/', 'es']
 
@@ -167,11 +168,11 @@ const languages = ['en', '/', 'es']
             {clickHam ?
                     <div className="overlay" >
                         <ul className="mov">
-                            <li><Link to='/'>Home</Link></li>
-                            <li><Link to='/about'>About</Link></li>
-                            <li><Link to='/projects'>Projects</Link></li>
-                            <li><Link to='/contact'>Contact</Link></li>
-                            <li><button onClick={() => setClickHam(!clickHam)}>Close</button></li>
+                            <li><Link to='/'>Inicio</Link></li>
+                            <li><Link to='/es/about'>Sobre Nosotros</Link></li>
+                            <li><Link to='/es/projects'>Proyectos</Link></li>
+                            <li><Link to='/es/contact'>Contacto</Link></li>
+                            <li><button onClick={() => setClickHam(!clickHam)}>Cerrar</button></li>
                         </ul>
                     </div>
                 :
@@ -180,10 +181,10 @@ const languages = ['en', '/', 'es']
             <nav>
                 <ul className="desk">
                     <li>
-                        <Link to='/about'>About</Link>
+                        <Link to='/es/about'>Sobre Nosotros</Link>
                     </li>
                     <li>
-                        <Link to='/projects'>Projects</Link>
+                        <Link to='/es/projects'>Proyectos</Link>
                     </li>
                     <li>
                         <div className='logo'>
@@ -197,12 +198,12 @@ const languages = ['en', '/', 'es']
                         </div>
                     </li>
                     <li>
-                        <Link to='/contact'>Contact</Link>
+                        <Link to='/es/contact'>Contacto</Link>
                     </li>
                     <ul className="lang">
                         {languages.map((lng,) => (
                         <li key={lng}>
-                            <Link to={lng === 'en' ? pathLink : '/es' + pathLink} language={lng}>
+                            <Link to={lng === 'en' ? pathEs : pathLink} language={lng}>
                             {lng === 'es' ? 'Es' : ''}
                             {lng === '/' ? '/' : ''}
                             {lng === 'en' ? 'En' : ''}

@@ -7,11 +7,11 @@ const DescriptionAbout = ({data}) => {
         <ContainerDescription>
             <div className='texto' data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
                 <BlockContent
-                    blocks={data.sanityAboutPage.descriptionAbout._rawEn}
+                    blocks={data.sanityAboutPage.descriptionAbout._rawEs}
                 />
             </div>
             <div className='services' data-aos="fade-up" data-aos-delay="600" data-aos-duration="800">
-                <strong>{data.sanityAboutPage.ourServicesText.en}</strong>
+                <strong>{data.sanityAboutPage.ourServicesText.es}</strong>
             </div>
         </ContainerDescription>
     )

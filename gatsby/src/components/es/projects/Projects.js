@@ -8,10 +8,10 @@ const Projects = ({data}) => {
         <ProyectosContainer>
             {data.allSanityProjectsPage.nodes.map(({ _id, title, thumbnail, location, event, slug }) => {
                 const bgGetDataImage = getImage(thumbnail.asset)
-                const bgGetDataImageAlt = thumbnail.altEn                
+                const bgGetDataImageAlt = thumbnail.altEs                
               return (
                   <div className='project' key={_id} >
-                      <Link to={`/projects/${slug.current}`}>
+                      <Link to={`/es/proyectos/${slug.current}`}>
                         <div className='image' >
                             <GatsbyImage
                                 style={{ height: "100%", width: "100%" }}
@@ -25,8 +25,8 @@ const Projects = ({data}) => {
                         <div className='info'>
                             <div className='text'>
                                 <h2 >{title}</h2>
-                                <p>{location.en}</p>
-                                <p>{event.en}</p>
+                                <p>{location.es}</p>
+                                <p>{event.es}</p>
                             </div>
                         </div>
                       </Link>
