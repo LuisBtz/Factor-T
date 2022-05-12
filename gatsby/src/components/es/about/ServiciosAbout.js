@@ -55,7 +55,7 @@ border-top: solid 1px var(--black);
          width: 100%;
          padding-top: 25px;
         padding-bottom: 25px;
-        
+        color: var(--black);
         @media (max-width: 680px) {
             &:hover {
                 background-color: none;

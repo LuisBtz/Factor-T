@@ -100,7 +100,7 @@ nav {
         width: calc(100% - 50px);
         margin: 0 auto;
         text-align: center;
-        margin-top: 50px;
+        margin-top: 20px;
         li {
             border-bottom: solid 1px var(--black);
             padding-bottom: 25px;
@@ -119,7 +119,10 @@ nav {
     }
     ul.mov.lang {
         display: block;
-        margin-top: 100px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 100px;
             li {
                 display: inline-block !important;
                 border-bottom: none;

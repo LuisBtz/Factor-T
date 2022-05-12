@@ -50,12 +50,12 @@ border-top: solid 1px var(--black);
      align-items: center;
      overflow: hidden;
      button {
-         display: block;
-         text-align: center;
-         width: 100%;
-         padding-top: 25px;
+        display: block;
+        text-align: center;
+        width: 100%;
+        padding-top: 25px;
         padding-bottom: 25px;
-        
+        color: var(--black);
         @media (max-width: 680px) {
             &:hover {
                 background-color: none;
