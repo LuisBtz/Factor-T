@@ -58,6 +58,7 @@ nav {
                 }
             }
         }
+        
         @media (max-width: 680px) {
             display: none;
         }
@@ -116,6 +117,19 @@ nav {
             }
         }
     }
+    ul.mov.lang {
+        display: block;
+        margin-top: 100px;
+            li {
+                display: inline-block !important;
+                border-bottom: none;
+                &:first-child {
+                    a {
+                        font-weight: bolder;
+                    }
+                }
+            }
+    }
 }
 `
 
@@ -172,6 +186,17 @@ const languages = ['en', '/', 'es']
                             <li><Link to='/projects'>Projects</Link></li>
                             <li><Link to='/contact'>Contact</Link></li>
                             <li><button onClick={() => setClickHam(!clickHam)}>Close</button></li>
+                        </ul>
+                        <ul className="lang mov">
+                            {languages.map((lng,) => (
+                            <li key={lng}>
+                                <Link to={lng === 'en' ? pathLink : '/es' + pathLink} language={lng}>
+                                {lng === 'es' ? 'ES' : ''}
+                                {lng === '/' ? '/' : ''}
+                                {lng === 'en' ? 'EN' : ''}
+                                </Link>
+                            </li>
+                            ))}
                         </ul>
                     </div>
                 :

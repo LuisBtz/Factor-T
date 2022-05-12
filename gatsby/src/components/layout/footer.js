@@ -29,6 +29,7 @@ padding-right: 25px;
 display: flex;
 justify-content: space-between;
 align-items: center;
+background-color: var(--white);
 @media (max-width: 680px) {
     flex-direction: column;
     justify-content: flex-end;

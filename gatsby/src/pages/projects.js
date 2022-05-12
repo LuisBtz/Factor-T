@@ -50,7 +50,7 @@ export const data = graphql`
 
 const black = true
 
-const background = 'transparent'
+const background = '#FFFFFF'
 
 // markup
 const ProjectsPage = ({data}) => {

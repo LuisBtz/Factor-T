@@ -60,6 +60,12 @@ const ContainerDescription = styled.section`
         }
         .tel, .mail {
             display: flex;
+            @media (max-width: 680px) {
+                margin: 0 0 10px 0 !important;
+                span {
+                    display: none;
+                }
+                }
             span {
                 justify-self: baseline;
                 font-size: 0.8rem;

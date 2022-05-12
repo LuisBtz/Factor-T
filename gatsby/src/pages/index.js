@@ -41,7 +41,7 @@ export const data = graphql`
 
 const black = false
 
-const background = '#FFFFFF'
+const background = '#EBDEC3'
 
 // markup
 const IndexPage = ({data}) => {
