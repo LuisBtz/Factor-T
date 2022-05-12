@@ -118,7 +118,7 @@ nav {
     }
     ul.mov.lang {
         width: calc(100% - 50px);
-        margin: 50px auto;
+        margin: 0 auto;
         text-align: center;
             li {
                 display: inline-block !important;
