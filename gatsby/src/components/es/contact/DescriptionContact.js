@@ -69,11 +69,24 @@ const ContainerDescription = styled.section`
         .top {
             display: flex;
             justify-content: center;
+            @media (max-width: 680px) {
+                flex-direction: column;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 10px;
+                .tel {
+                    margin-bottom: 10px;
+                }
+            }
             .tel {
                 margin-right: 50px;
             }
         }
         .bot {
+            @media (max-width: 680px) {
+                padding: 0 15px;
+            }
             .insta {
                 margin-top: 50px;
                 a {
